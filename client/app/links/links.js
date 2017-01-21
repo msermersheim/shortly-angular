@@ -1,5 +1,9 @@
 angular.module('shortly.links', [])
 
 .controller('LinksController', function ($scope, Links) {
-  // Your code here
+  $scope.data = {};
+  console.log('SCIZOPE: ', Links)
+  $scope.update = function() {
+    Links.getAll();
+  }
 });
